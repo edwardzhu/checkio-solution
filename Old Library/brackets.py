@@ -1,27 +1,17 @@
+BRACKET_PAIRS = ['()', '{}', '[]', '<>']
+OPEN_BRACKETS = {a for a, _ in BRACKET_PAIRS}
+CLOSE_BRACKETS = {b: a for a, b in BRACKET_PAIRS}
+
 def checkio(data):
     stack = []
     for ch in data:
-        if ch == '{' or ch == '(' or ch == '[':
+        if ch in OPEN_BRACKETS:
             stack.append(ch)
-        elif ch == '}':
-            if len(stack) == 0:
+        elif ch in CLOSE_BRACKETS:
+            if not stack or stack[-1] != CLOSE_BRACKETS[ch]:
                 return False
-            c = stack.pop()
-            if c != '{':
-                return False
-        elif ch == ']':
-            if len(stack) == 0:
-                return False
-            c = stack.pop()
-            if c != '[':
-                return False
-        elif ch == ')':
-            if len(stack) == 0:
-                return False
-            c = stack.pop()
-            if c != '(':
-                return False
-    return len(stack) == 0
+            stack.pop()
+    return not stack
 
 if __name__ == '__main__':
     assert checkio("((5+3)*2+1)") is True, "Test1"
