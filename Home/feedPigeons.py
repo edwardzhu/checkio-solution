@@ -5,10 +5,9 @@ def checkio(n):
 def feed(n, pigeon, last):
     if n <= last:
         return last
-    if last < n <= pigeon:
+    if n <= pigeon:
         return n
-    if n > pigeon:
-        return feed(n - pigeon, 2 * pigeon - last + 1, pigeon)
+    return feed(n - pigeon, 2 * pigeon - last + 1, pigeon)
 
 
 if __name__ == '__main__':
