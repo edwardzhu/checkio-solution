@@ -1,10 +1,10 @@
 import operator
-def checkio(arr):
-    index = convertMapToTuples(arr[0])
-    cube = convertCubeToList(arr[1])
+def recall_password(cipher_grille, ciphered_password):
+    index = convertMapToTuples(cipher_grille)
+    cube = convertCubeToList(ciphered_password)
     output = ''
 
-    dimension = len(arr[0])
+    dimension = len(cipher_grille)
     for i in range(0, 4):
         index.sort(key=operator.itemgetter(0, 1))
         for idx in index:
@@ -36,24 +36,22 @@ def rotateCube(tuples, dimension):
     return result
 
 if __name__ == "__main__":
-    assert checkio([[
-'X...',
-'..X.',
-'X..X',
-'....'],[
-'itdf',
-'gdce',
-'aton',
-'qrdi']
-]) == 'icantforgetiddqd', 'Test1'
+    assert recall_password(
+        ('X...',
+         '..X.',
+         'X..X',
+         '....'),
+        ('itdf',
+         'gdce',
+         'aton',
+         'qrdi')) == 'icantforgetiddqd', 'First example'
 
-    assert checkio([[
-'....',
-'X..X',
-'.X..',
-'...X'],[
-'xhwc',
-'rsqx',
-'xqzz',
-'fyzr']
-]) == 'rxqrwsfzxqxzhczy', "Test2"
+    assert recall_password(
+        ('....',
+         'X..X',
+         '.X..',
+         '...X'),
+        ('xhwc',
+         'rsqx',
+         'xqzz',
+         'fyzr')) == 'rxqrwsfzxqxzhczy', 'Second example'
