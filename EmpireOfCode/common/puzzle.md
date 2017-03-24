@@ -1,4 +1,4 @@
-###Max of Two
+### Max of Two
 
 Define a function that takes two numbers as arguments and returns the largest of them.
 
@@ -11,8 +11,9 @@ Define a function that takes two numbers as arguments and returns the largest of
 my_max(3, 3) == 3
 my_max(0, 1) == 1
 my_max(3, 2) == 3
+
 --------------------------------------
-###String Length
+### String Length
 
 Define a function that computes the length of a given string.
 
@@ -20,13 +21,14 @@ Define a function that computes the length of a given string.
 
 **Output:** It's length.
 
-**Example:**
-
+**Example:** 
+````
 str_length("") == 0
 str_length("mo") == 2
 str_length("length") == 6
+````
 ---------------------------------------
-###Rotate List
+### Rotate List
 
 Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]. Try solving this without creating a copy of the list.
 
@@ -35,11 +37,12 @@ Write a function that rotates a list by k elements. For example [1,2,3,4,5,6] ro
 **Output:** Converter list of elements
 
 **Example:**
-
+````
 rotate_list([1, 2, 3, 4, 5, 6], 2) === [3, 4, 5, 6, 1, 2]
 rotate_list([1, 2, 3, 4, 5, 6], 3) === [4, 5, 6, 1, 2, 3]
+````
 ---------------------------------------
-###Fizz Buzz
+### Fizz Buzz
 
 To get them ready for storage, we need the worker-bots to sort crystals by 3 or 5 or divide them by the number of edges. To make things easier, we will base our program on the ancient human word game "Fizz buzz".
 
@@ -58,11 +61,12 @@ The number as a string for all other cases.
 **Output:** The answer as a string.
 
 **Example:**
-
+````
 fizz_buzz(15) == "Fizz Buzz"
 fizz_buzz(6) == "Fizz"
 fizz_buzz(5) == "Buzz"
 fizz_buzz(7) == "7"
+````
 
 **Precondition:**
 
@@ -73,7 +77,7 @@ fizz_buzz(7) == "7"
 Here you can learn how to write simple functions and work with if-else statements.
 
 --------------------------------------
-###Number Base
+### Number Base
 
 Sometimes the robots mix up their coordinates and use other [Numeral systems](https://en.wikipedia.org/wiki/Numeral_system). Let's try to sort this out and see what could be going on.
 
@@ -104,7 +108,7 @@ re.match("\A[A-Z0-9]\Z", str_number)
 Here you will learn how to work with the various numeral systems and handle exceptions.
 
 --------------------------------------
-###Two Monkeys
+### Two Monkeys
 
 We have two monkeys, a and b, and the parameters asmile and bsmile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.
 
@@ -121,7 +125,7 @@ two_monkeys(False, True) == False
 ````
 
 --------------------------------------
-###Most Numbers
+### Most Numbers
 You are given an array of numbers from which you must find the difference between the maximum and minimum elements. Your function should be able to handle an undefined amount of arguments. For an empty argument list, the function should return 0.
 
 Floating-point numbers are represented in computer hardware as base 2 (binary) fractions, since this is the case, we should check that the result is within 0.001 precision.
@@ -146,7 +150,7 @@ most_difference() == 0
 The important concept to learn from this mission is about passing an undefined amount of arguments to functions.
 
 -------------------------------------
-###Non Unique
+### Non Unique
 You are given a non-empty list of integers (X). For this task, you should return a list consisting of only the non-unique elements in this list. To do so you will need to remove all unique elements (elements which are contained in a given list only once). When solving this task, do not change the order of the list. Example: [1, 2, 3, 1, 3] 1 and 3 non-unique elements so the result will be [1, 3, 1, 3].
 
 **Input:** A list of integers.
@@ -179,7 +183,7 @@ data contains only numbers or letters (one symbol string).
 This mission will help you to understand how to use manipulate arrays, giving you a foundation for solving more complex tasks. The concept can be easily generalized for real world tasks. For example; it allows you to clarify data by removing low frequency elements (noise).
 
 -------------------------------------
-###Robot Sort
+### Robot Sort
 
 You are given the size and initial order of the ingots as an array of numbers. Indexes are their position, values are their sizes. You should order this array from the smallest to the largest in size.
 
@@ -223,7 +227,7 @@ swap_sort((1, 2, 3, 5, 3)) == "43"
 This mission will show you how to work the simplest sorting algorithms. It also models one of the game mechanics in the classic puzzle game "Tetris Attack".
 
 -----------------------------------
-###Clock Angle
+### Clock Angle
 
 Analog clocks display time with an analog clock face, which consists of a round dial with the numbers 1 through 12, the hours in the day, around the outside. The hours are indicated with an hour hand, which makes two revolutions in a day, while the minutes are indicated by a minute hand, which makes one revolution per hour. In this mission we will use a clock without second hand. The hour hand moves smoothly and the minute hand moves step by step.
 
@@ -248,7 +252,7 @@ Input time matches by regexp expression `"\A((2[0-3])|([0-1][0-9])):[0-5][0-9]\Z
 Simple mathematics and skill to built a model for various things from real world.
 
 ----------------------------------
-###Triangle Angles
+### Triangle Angles
 
 You are given the lengths for each side of a triangle. You need to find all three of the angles for this triangle. If the given side lengths cannot form a triangle (or form a degenerated triangle), then you must return all angles as 0 (zero). The angles should be represented as a list of integers in **ascending** order. Each angle is measured in degrees and rounded to the nearest integer number using standard mathematical rounding.
 
@@ -273,7 +277,7 @@ angles(2, 2, 5) == [0, 0, 0]
 This is a classical geometry problem. With this concept you can measure an angle without the need for a protractor for use in fields such as topography or architecture.
 
 --------------------------------
-###Vault Password
+### Vault Password
 
 The password will be considered strong enough if its length is greater than or equal to 10 characters, it contains at least one digit, as well as at least one uppercase letter and one lowercase letter. The password may only contain ASCII latin letters or digits, no punctuation symbols.
 
@@ -321,7 +325,7 @@ Your code should be shorter than 100 characters.
 If you are worried about the security of your app or service, you can use this handy code to personally check your users' passwords for complexity. You can further use these skills to require that your users passwords meet or include even more conditions, punctuation or unicode.
 
 -----------------------------
-###Boolean Algebra
+### Boolean Algebra
 
 In mathematics and mathematical logic, [Boolean algebra](https://en.wikipedia.org/wiki/Boolean_algebra#Basic_operations) is a sub-area of algebra in which the values of the variables are true or false, typically denoted with 1 or 0 respectively. Instead of elementary algebra where the values of the variables are numbers and the main operations are addition and multiplication, the main operations of Boolean algebra are the conjunction (denoted ∧), the disjunction (denoted ∨) and the negation (denoted ¬).
 
