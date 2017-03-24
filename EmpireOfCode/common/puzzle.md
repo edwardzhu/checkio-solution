@@ -419,3 +419,33 @@ index_power([1, 2], 3) == -1
 This mission teaches you how to use basic arrays and indexes in combination with simple mathematics.
 
 ------------------
+### Crystal Row
+
+Because crystals are such an important resource, systems must be put in place to check the crystal quality during the growth and harvest periods. For our initial tests, we use random spot checks on the atomic lines composing each of the crystals. This crystal type contains two atoms composed of the elements "X" (Xenatom) and "Z" (Zorium). In a well grown crystal, these atoms should alternate down the atomic line.
+
+You are given a random atomic line from a sample crystal lattice as a sequence of the letters "X" and "Z". A good line should have the periodic arrangement (one by one) looking like ["X", "Z", "X", "Z"]. If any atoms neighbor another of the same element, then this crystal is of no use to us and should be discarded.
+````
+X - Z - X - Z - X - Z Good
+Z - X - Z - X - Z - X Good
+Z - X - X - Z - X - Z Bad
+Z - X - Z - Z - Z - X Bad
+````
+**Input:** Atomic lines as a list of strings.
+
+**Output:** The crystal quality as a boolean.
+
+**Example:**
+````
+checkLine(["X", "Z", "X"]) == true
+checkLine(["X", "Z", "X", "X"]) == false
+````
+**Precondition:**
+````
+1 < |line| ≤ 1000
+∀ x ∈ line: x='X' OR x='Z'
+````
+**How it is used:**
+
+This is first simple data structure and here you can learn how to work with a list. It's a simple concept which you can solve by just pausing to think.
+
+----------------
