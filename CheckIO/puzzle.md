@@ -1,4 +1,4 @@
-###Non-unique Elements
+### Non-unique Elements
 You are given a non-empty list of integers (X). For this task, you should return a list consisting of only the non-unique elements in this list. To do so you will need to remove all unique elements (elements which are contained in a given list only once). When solving this task, do not change the order of the list. Example: [1, 2, 3, 1, 3] 1 and 3 non-unique elements and result will be [1, 3, 1, 3].
 
 **Input:** A list of integers.
@@ -22,7 +22,7 @@ This mission will help you to understand how to manipulate arrays, something tha
 0 < len(data) < 1000
 
 ----------------------------------------------------
-###Roman Numerals
+### Roman Numerals
 Roman numerals come from the ancient Roman numbering system. They are based on specific letters of the alphabet which are combined to signify the sum (or, in some cases, the difference) of their values. The first ten Roman numerals are:
 
 I, II, III, IV, V, VI, VII, VIII, IX, and X.
@@ -61,7 +61,7 @@ checkio(3999) == 'MMMCMXCIX'
 **Precondition:** 0 < number < 4000
 
 --------------------------------------------
-###Open Labyrinth
+### Open Labyrinth
 The labyrinth has no walls, but bushes surround the path on each side. If a players move into a bush, they lose. The labyrinth is presented as a matrix (a list of lists): 1 is a bush and 0 is part of the path. The labyrinth's size is 12 x 12 and the outer cells are also bushes. Players start at cell (1,1). The exit is at cell (10,10). You need to find a route through the labyrinth. Players can move in only four directions--South (down [1,0]), North (up [-1,0]), East (right [0,1]), West (left [0, -1]). The route is described as a string consisting of different characters: "S"=South, "N"=North, "E"=East, and "W"=West.
 
 **Input:** A labyrinth map as a list of lists with 1 and 0.
@@ -92,7 +92,7 @@ len(labyrinth) == 12
 all(len(row) == 12 for row in labyrinth)
 ````
 ---------------------------------------------
-###Cipher map
+### Cipher map
 A cipher grille is a 4×4 square of paper with four windows cut out. Placing the grille on a paper sheet of the same size, the encoder writes down the first four symbols of his password inside the windows (see fig. below). After that, the encoder turns the grille 90 degrees clockwise. The symbols written earlier become hidden under the grille and clean paper appears inside the windows. The encoder then writes down the next four symbols of the password in the windows and turns the grille 90 degrees again. Then, they write down the following four symbols and turns the grille once more. Lastly, they write down the final four symbols of the password. Without the same cipher grille, it is difficult to discern the password from the resulting square comprised of 16 symbols. Thus, the encoder can be confident that no hooligan will easily gain access to the locked door.
 Write a module that enables the robots to easily recall their passwords through codes when they return home.
 
@@ -137,7 +137,7 @@ all(all(ch in string.ascii_lowercase for ch in row) for row in ciphered_password
 all(all(ch == "X" or ch == "." for ch in row) for row in cipher_grille)
 ````
 -------------------------------------------
-###Pawn Brotherhood
+### Pawn Brotherhood
 Almost everyone in the world knows about the ancient game [Chess](https://en.wikipedia.org/wiki/Chess) and has at least a basic understanding of its rules. It has various units with a wide range of movement patterns allowing for a huge number of possible different game positions (for example [Number of possible chess games at the end of the n-th plies](http://oeis.org/A048987).) For this mission, we will examine the movements and behavior of chess pawns.
 
 Chess is a two-player strategy game played on a checkered game board laid out in eight rows (called ranks and denoted with numbers 1 to 8) and eight columns (called files and denoted with letters a to h) of squares. Each square of the chessboard is identified by a unique coordinate pair — a letter and a number (ex, "a1", "h8", "d6"). For this mission we only need to concern ourselves with pawns. A pawn may capture an opponent's piece on a square diagonally in front of it on an adjacent file, by moving to that square. For white pawns the front squares are squares with greater row than their.
@@ -163,7 +163,7 @@ safe_pawns({"b4", "c4", "d4", "e4", "f4", "g4", "e5"}) == 1
 0 < pawns ≤ 8
 
 -----------------------------------------
-###Min and Max
+### Min and Max
 In this mission you should write you own py3 implementation (but you can use py2 for this) of the built-in functions **min** and **max**. Some builtin functions are closed here: *import, eval, exec, globals*. Don't forget you should implement two functions in your code.
 
 **max(iterable, \*[, key]) or min(iterable, \*[, key])**
