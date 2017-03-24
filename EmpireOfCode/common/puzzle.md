@@ -361,13 +361,29 @@ boolean(1, 0, "conjunction") == 0
 boolean(0, 1, "exclusive") == 1
 ````
 **Precondition:**
-
+````
 x in (0, 1)
-
 y in (0, 1)
-
 operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+````
 
 **How it is used:**
 
 Fixing our defense bot's logic modules gets you working with boolean values and operators, a core concept in many programming languages.
+
+----------------------------
+### List Combitation
+
+Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+**Input:** Two lists
+
+**Output:** List - combination of two
+
+**Example:**
+````
+list_combination([1, 2, 3], [4, 5, 6]) == [1, 4, 2, 5, 3, 6]
+list_combination([1, 1, 1, 1], [2, 2, 2, 2]) == [1, 2, 1, 2, 1, 2, 1, 2]
+````
+
+--------------------------
