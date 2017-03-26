@@ -97,3 +97,29 @@ median((3, 6, 20, 99, 10, 15)) == 12.5
 
 The median has usage for Statistics and Probability theory, it has especially significant value for skewed distribution. Here's an example: we want to know the average income of people from a set of data and 100 people earn $100 in month while 10 people earn $1,000,000. If we average it out we get $91,000. This is weird value and does nothing to show us the real picture.
 In this case the median would give to us more useful value and a better picture. [The Article at Wikipedia](https://en.wikipedia.org/wiki/Median).
+
+--------------------------
+### Secret Message
+
+You are given a chunk of text. Gather all of the capital letters in one word in the order that they appear in the text.
+
+For example: text = "**H**ow are you? **E**h, ok. **L**ow or **L**ower? **O**hhh.", if we collect all of the capital letters, we get the message "HELLO".
+
+**Input:** A text as a string.
+
+**Output:** The secret message as a string or an empty string.
+
+**Example:**
+````
+find_message("How are you? Eh, ok. Low or Lower? Ohhh.") == "HELLO"
+find_message("hello world!") == ""
+````
+**Precondition:**
+```
+0 < |text| ≤ 1000
+```
+**How it is used:**
+
+This type of communication has been used to send secret messages, or even tell jokes. But the skills behind it show you how to find specific types of information or patterns hidden within larger chunks of data that would be difficult to find by hand.
+
+--------------------------
