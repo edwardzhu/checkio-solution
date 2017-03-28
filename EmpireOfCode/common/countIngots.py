@@ -1,10 +1,4 @@
-def count_ingots(report):
-    result = 0
-    scores = str.split(report, ",")
-    for v in scores:
-        s = v.lower()
-        result += (ord(s[0]) - ord('a')) * 9 + int(s[1])
-    return result
+count_ingots = lambda r:sum([(ord(s[0].upper())-ord('A'))*9+int(s[1]) for s in str.split(r,",")])
 
 if __name__ == '__main__':
     # These "asserts" using only for self-checking and not necessary for auto-testing
