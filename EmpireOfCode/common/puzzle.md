@@ -748,3 +748,31 @@ tell_number(40) == 'forty'
 **How it is used:**
 
 This concept may be useful for the speech synthesis software or automated report systems. The system could also be used when writing a chatbot by assigning words or phrases numerical values and having a system retrieve responses based on those values.
+
+-------------
+### Monkey Typing
+
+You are given some text which possibly contains sensible words. You should count how many words are included in the given text. A word should be whole and may be a part of another word. Letter case does not matter. Words are given in lowercase and don't repeat. If a word appears several times in the text, it should be counted only once.
+
+For example, text - "How are sjfhdskfhskd you?", words - ("how", "are", "you", "hello"). The result will be 3.
+
+**Input:** Two arguments. A text as a string and words as a set of strings.
+
+**Output:** The number of words in the text as an integer.
+
+**Example:**
+````
+count_words("How aresjfhdskfhskd you?", {"how", "are", "you", "hello"}) == 3
+count_words("Bananas, give me bananas!!!", {"banana", "bananas"}) == 2
+count_words("Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+            {"sum", "hamlet", "infinity", "anything"}) == 1
+````
+**Precondition:**
+````
+0 < |text| ≤ 256
+
+All words are given in lowercase.
+````
+**How it is used:**
+
+Python is a useful and powerful language for text processing. This mission is only a simple example of the kind of text searching tools you could build.
