@@ -863,3 +863,28 @@ All commands match with "\APUSH [A-Z]\Z" or "\APOP\Z" regexp expression.
 **How it is used:**
 
 Queues provide services in computer science, transportation, and operations research where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a buffer.
+
+--------------
+### Binary Count
+
+You are given a positive integer as a number, and you need to convert it to the binary format then count how many units (1) there are. For example: 5 = 0b101 contains two units, so the answer is 2.
+
+**Input:** A number as a positive integer.
+
+**Output:** The quantity of units in binary form as an integer.
+
+**Example:**
+````
+count_units(4) == 1
+count_units(15) == 4
+count_units(1) == 1
+count_units(1022) == 9
+````
+**Precondition:**
+````
+0 ≤ number ≤ 2^32
+````
+
+**How it is used:**
+
+Binary as a computer language is very difficult for humans to understand, but makes the lives of our computers and robots easier. Every time you press a key on your keyboard it sends a binary signal informing the computer you hit that key. Every time you code a program, the computer takes your code and interprets it in binary then executes your program.
