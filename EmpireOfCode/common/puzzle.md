@@ -918,3 +918,30 @@ Correct Earth coordinates.
 **How it is used:**
 
 The concepts presented in this mission are the exact sorts of concepts used in navigational software, enabling a ship or plane to understand where it is, where it must go and how far it has gone. Along the same vein, Global Positioning Satellites use similar principles to provide pinpoint accurate locations to GPS receivers for use in navigation.
+
+---------------
+### Super Root
+
+The super root of a number **N** is the number **x**, such that `x^x = N`.
+
+The result should be accurate so that `x^x ≈ N±0.001`.
+
+Or `N - 0.001 < x^x < N + 0.001`.
+
+**Input:** A number (N) as an integer.
+
+**Output:** The super root (x) as a float or an integer.
+
+**Example:**
+````
+super_root(4) # 2
+super_root(27) # 3
+super_root(81) # 3.504339593597054
+````
+**Precondition:**
+````
+1 ≤ number ≤ 10^10
+````
+**How it is used:**
+
+This concept comes in useful when working in cryptography as complex mathematics often comes into play. In addition this skill could come in useful should you find yourself in a situation where you need ot develop a smarter calculator.
