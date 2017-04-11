@@ -996,3 +996,45 @@ The bill is sorted by datetime.
 **How it is used:**
 
 This mission will teach you how to parse and analyse various types data and encourages you to single out important fragments from a larger dataset.
+
+------------------
+### Counting Tiles
+
+Each square tile has a size of 1x1 meters. You need to calculate how many whole and partial tiles are needed for a circle with a radius of N meters. The center of the circle will be at the intersection of four tiles. For example: a circle with a radius of 2 metres requires 4 whole tiles and 12 partial tiles.
+
+**Input:** The radius of a circle as a float.
+
+**Output:** The quantities of whole and partial tiles as a list or tuple with two integers -- \[solid, partial\].
+
+**Example:**
+````
+golf(2) == [4, 12]
+golf(3) == [16, 20]
+golf(2.1) == [4, 20]
+golf(2.5) == [12, 20]
+````
+**Precondition:**
+````
+0 < radius ≤ 4
+````
+**Scoring:**
+
+In this mission the main goal is to make your code as short as possible. The shorter your code, the more points you earn. Your score for this mission is dynamic and directly related to the length of your code.
+
+Scoring in this mission is based on the number of characters used in your code (comment lines are not counted).
+
+**Rank1:**
+
+Any code length.
+
+**Rank2:**
+
+Your code should be shorter than 250 characters.
+
+**Rank3:**
+
+Your code should be shorter than 150 characters.
+
+**How it is used:**
+
+This task is a simple geometry problem which uses concepts you can find in architecture and topography. You can even use it to calculate the amount of materials needed for your own building project.
