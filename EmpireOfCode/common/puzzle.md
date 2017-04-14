@@ -1174,3 +1174,34 @@ Input number string matches at `"[A-Z1-9][A-Z0-9]{0, 9}"` regular expression.
 Let's familiarize ourselves with numeral systems and examine the radix. Many devices are built to accept numbers in decimal representation and display the results in decimal. Often such devices convert from decimal to some internal radix on input, do all internal operations in that radix, and then convert the results from the internal radix to decimal on output. Such devices could in principle use any radix internally. The people who design such computing devices sometimes wonder what would be the "best" radix to use internally for the radix economy.
 
 The octal, hexadecimal and base-64 systems are often used in computing because of their ease as shorthand for binary.
+
+--------------
+### Verify Anagrams
+
+An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once. Two words are anagrams to each other if we can get one from another by rearranging the letters. Anagrams are case-insensitive and don't take whitespaces into account.
+
+For example: "Gram Ring Mop" and "Programming" are anagrams. But "Hello" and "Ole Oh" are not.
+
+You are given two words or phrases. Try to verify if they are anagrams.
+
+**Input:** Two arguments. Words as strings.
+
+**Output:** Determination if the passwords are anagrams or not as boolean (True or False).
+
+**Example:**
+````
+verify_anagrams("Programming", "Gram Ring Mop") == True
+verify_anagrams("Hello", "Ole Oh") == False
+verify_anagrams("Kyoto", "Tokyo") == True
+````
+**Precondition:**
+````
+0 < |first_word| < 100
+
+0 < |second_word| < 100
+````
+Words contain only ASCII latin letters and whitespaces.
+
+**How it is used:**
+
+Anagramming can be a fun way to train your brain, but they have other applications. Psychologists use anagram-oriented tests, often called "anagram solution tasks", to assess the implicit memory. Anagrams are often used to create pseudonyms, allowing one to conceal, reveal or operate somewhere in between - like a mask that can establish identity. In addition to this, multiple anagramming is a technique sometimes used to solve some kinds of cryptograms.
