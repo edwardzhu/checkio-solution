@@ -1249,3 +1249,72 @@ Your code should be shorter than 70 characters.
 **How it is used:**
 
 This mission teaches you to work with simple data type conversions to solve a problem.
+
+------------
+### Digit Stack
+
+We will emulate the stack process with Python. You are given a sequence of commands:
+
+- "PUSH X" -- add **X** in the stack, where **X** is a digit.
+- "POP" -- look and remove the top position. If the stack is empty, then it returns 0 (zero) and does nothing.
+- "PEEK" -- look at the top position. If the stack is empty, then it returns 0 (zero). The stack can only contain digits.
+
+You should process all commands and sum all digits which were taken from the stack ("PEEK" or "POP"). The initial value of the sum is 0 (zero).
+
+Let's look at an example, here’s the sequence of commands:
+````
+["PUSH 3", "POP", "POP", "PUSH 4", "PEEK", "PUSH 9", "PUSH 0", "PEEK", "POP", "PUSH 1", "PEEK"]
+````
+````
+| Command | Stack | Sum 
+|---------|-------|-----
+| PUSH 3  | 3     | 0
+| POP     |       | 0+3
+| POP     |       | 3+0
+| PUSH 4  | 4     | 3
+| PEEK    | 4     | 3+4
+| PUSH 9  | 4,9   | 7
+| PUSH 0  | 4,9,0 | 7
+| PEEK    | 4,9,0 | 7+0
+| POP     | 4,9   | 7+0
+| PUSH 1  | 4,9,1 | 7
+| PEEK    | 4,9,1 | 7+1=8
+````
+In this mission the main goal to make your code as short as possible. The shorter your code, the more points you earn. Your score for this mission is dynamic and directly related to the length of your code.
+
+**Input:** A sequence of commands as a list of strings.
+
+**Output:** The sum of the taken digits as an integer.
+
+**Example:**
+````
+golf(("PUSH 3", "POP", "POP", "PUSH 4", "PEEK", "PUSH 9", "PUSH 0", "PEEK", "POP", "PUSH 1", "PEEK")) == 8
+golf(("POP", "POP")) == 0
+golf(("PUSH 9", "PUSH 9", "POP")) == 9
+golf(()) == 0
+````
+**Precondition:**
+````
+0 ≤ |commands| ≤ 20
+````
+All commands match at `"\APUSH \d\Z"` regular expression or equal by `"POP"` or equal by `"PEEK"`.
+
+**Scoring:**
+
+Scoring in this mission is based on the number of characters used in your code (comment lines are not counted).
+
+**Rank1:**
+
+Any code length.
+
+**Rank2:**
+
+Your code should be shorter than 250 characters.
+
+**Rank3:**
+
+Your code should be shorter than 150 characters.
+
+**How it is used:**
+
+Stacks have numerous applications. We see stacks in everyday life, from the books in our library, to the blank sheets of paper in our printer tray. All of them follow the Last In First Out (LIFO) logic, that is when we add a book to a pile of books, we add it to the top of the pile, whereas when we remove a book from the pile, we generally remove it from the top of the pile. After all, taking one from the middle just makes a mess.
