@@ -1141,3 +1141,36 @@ roman(3999) == 'MMMCMXCIX'
 **How it is used:**
 
 This is an educational task that allows you to explore different numbering systems. Since roman numerals are often used in the typography, it can alternatively be used for text generation. The year of construction on building faces and cornerstones is most often written by Roman numerals. These numerals have many other uses in the modern world and you read about it [here...](http://en.wikipedia.org/wiki/Roman_numerals#Modern_usage) Or maybe you will have a customer from Ancient Rome ;-)
+
+----------------
+### Good Radix
+
+You are given some number 'n' written as a string with a radix equal to `k (1 < k < 37)`. We know that our number is divisible by `(k - 1)` without a remainder. You should find the smallest possible `k` if it exists, or return `0` in the case where it doesn't.
+
+For example: where `n = 18`, `k` should be greater than 8.
+
+If `k == 9`, then `n = 17` in the decimal system and `17 % 8 == 1`. This is the wrong radix.
+
+If `k == 10`, then `n = 18` in the decimal system and `18 % 9 == 0`. We found the answer.
+
+**Input:** A number as a string.
+
+**Output:** The radix k as an integer.
+
+**Example:**
+````
+good_radix(u"18") == 10
+good_radix(u"1010101011") == 2
+good_radix(u"222") == 3
+good_radix(u"A23B") == 14
+good_radix(u"IDDQD") == 0
+````
+**Precondition:**
+
+Input number string matches at `"[A-Z1-9][A-Z0-9]{0, 9}"` regular expression.
+
+**How it is used:**
+
+Let's familiarize ourselves with numeral systems and examine the radix. Many devices are built to accept numbers in decimal representation and display the results in decimal. Often such devices convert from decimal to some internal radix on input, do all internal operations in that radix, and then convert the results from the internal radix to decimal on output. Such devices could in principle use any radix internally. The people who design such computing devices sometimes wonder what would be the "best" radix to use internally for the radix economy.
+
+The octal, hexadecimal and base-64 systems are often used in computing because of their ease as shorthand for binary.
