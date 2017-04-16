@@ -1318,3 +1318,45 @@ Your code should be shorter than 150 characters.
 **How it is used:**
 
 Stacks have numerous applications. We see stacks in everyday life, from the books in our library, to the blank sheets of paper in our printer tray. All of them follow the Last In First Out (LIFO) logic, that is when we add a book to a pile of books, we add it to the top of the pile, whereas when we remove a book from the pile, we generally remove it from the top of the pile. After all, taking one from the middle just makes a mess.
+
+-----------
+### Hidden Word
+
+You are given a rhyme (a multiline string), in which lines are separated by "newline" (\n). Casing does not matter for your search, but whitespaces should be removed beforehand. You should find the word inside the rhyme in the horizontal (from left to right) or vertical (from up to down) lines. For this you need envision the rhyme as a matrix (2D array). Find the coordinates of the word in the cut rhyme (without whitespaces).
+
+The result must be represented as a list -- **\[row_start,column_start,row_end,column_end\]**, where
+
+- **row_start** is the line number for the first letter of the word.
+- **column_start** is the column number for the first letter of the word.
+- **row_end** is the line number for the last letter of the word.
+- **column_end** is the line number for the last letter of the word.
+- Counting of the rows and columns start from 1.
+
+**Input:** Two arguments. A rhyme as a string and a word as a string (lowercase).
+
+**Output:** The coordinates of the word as a list/tuple.
+
+**Example:**
+````
+find_word(u"""DREAMING of apples on a wall,
+And dreaming often, dear,
+I dreamed that, if I counted all,
+-How many would appear?""", u"ten") == [2, 14, 2, 16]
+
+find_word("""He took his vorpal sword in hand:
+Long time the manxome foe he sought--
+So rested he by the Tumtum tree,
+And stood awhile in thought.
+And as in uffish thought he stood,
+The Jabberwock, with eyes of flame,
+Came whiffling through the tulgey wood,
+And burbled as it came!""", "noir") == [4, 16, 7, 16]
+````
+**Precondition:**
+````
+0 < len(word) < 10
+0 < len(rhyme) < 300
+````
+**How it is used:**
+
+This task shows the variance of the positional ciphers. With this cipher you can hide a message within a book which allows you and receiver to send these coded messages.
