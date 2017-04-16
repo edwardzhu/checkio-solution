@@ -1360,3 +1360,46 @@ And burbled as it came!""", "noir") == [4, 16, 7, 16]
 **How it is used:**
 
 This task shows the variance of the positional ciphers. With this cipher you can hide a message within a book which allows you and receiver to send these coded messages.
+
+-----------------------
+### Most Wanted Letter
+
+You are given a text which contains different English letters and punctuation symbols. You must find the most frequent letter in the given text. The letter returned must be in lower case.
+
+While checking for the most wanted letter, casing does not matter. For the purpose of your search, "A"=="a". Make sure you do not count punctuation symbols, digits and white spaces, only letters.
+
+If you have two or more letters with the same frequency, then return any of them.
+
+**Input:** Some text for analysis as a string. The second argument is optional with the default value. It's used for "Rank 3".
+
+**Output:** The most frequent letter in lower case as a string.
+
+**Example:**
+````
+most_letter("Hello World!") in "l"
+most_letter("How do you do?") == "o"
+most_letter("One") in "one"
+most_letter("Oops!") == "o"
+most_letter("AAaooo!!!!") in "ao"
+most_letter("abe") in "abe"
+````
+**Precondition:**
+
+A text contains only ASCII symbols.
+````
+0 < |text| ≤ 10^5
+````
+
+**Optional goals**
+
+**Rank 2:**
+
+If you have **two or more letters with the same frequency**, then return the letter which comes first in the alphabet. For example -- "one" contains "o", "n", "e" only once for each and since it comes first, we choose "e".
+
+**Rank 3:**
+
+If the second argument "all_letters" is True, then your function should return all letters from the text in lowercase as a string. Letters must be sorted in descending order by frequency and same frequency letters by alphabetical order. For example -- "Hello" ⇒ "leho". "l" is the first because appears twice and other letters are sorted by alphabet.
+
+**How it is used:**
+
+For most decryption tasks you need to know the frequency of occurrence for various letters in a section of text. With this information we can easily crack a simple addition or substitution cipher. This is interesting stuff for language experts!
