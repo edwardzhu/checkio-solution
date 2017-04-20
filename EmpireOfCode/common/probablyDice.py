@@ -1,18 +1,16 @@
 def probability(dice_number, sides, target):
-    total = sides ** dice_number
-    cases = calc_probability(dice_number, sides, target)
-    return cases / total
+    total, result, case = sides ** dice_number, [[]], 0
+    result[0] = sides * [1] + sides * (dice_number - 1) * [0]
+    for i in range(1, dice_number):
+        result.append([0])
+        for j in range(1, sides * dice_number):
+            result[i].append(0)
+            for k in range(max(j-sides, 0), j):
+                result[i][j] += result[i-1][k]
+    if target > dice_number * sides or target < 1:
+        return 0
+    return result[dice_number - 1][target - 1] / total
 
-
-def calc_probability(dice_number, sides, target):
-    result = 0
-    if target > dice_number * sides or target <= 0:
-        return result
-    if dice_number == 1 or dice_number * sides == target:
-        return 1
-    for i in range(sides):
-        result += calc_probability(dice_number-1, sides, target-i-1)
-    return result
 
 if __name__ == '__main__':
     # These are only used for self-checking and are not necessary for auto-testing
