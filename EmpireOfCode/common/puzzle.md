@@ -1479,3 +1479,56 @@ Each digit contains no more than one wrong pixel.
 **How it is used:**
 
 This task will show you how optical character recognition works and will familiarize you with low-resolution fonts requiring noise-immunity. This can be useful for the systems that required the reliability.
+
+-----------------------
+### Crystal Lattice
+
+With the linear and slice scans completed, we are now ready to check the crystals with a 3D scanner. For this, we'll start with a cubic sample of the crystal and check the adjacent atoms, much like in the previous scans. This crystal type contains two atoms composed of the elements "X" (Xenatom) and "Z" (Zorium). In a well grown crystal, these atoms should alternate down each of the three axis.
+
+You are given a sample crystal as a 3D array of atoms. Well formed crystals will have atoms alternating along the X, Y and Z axis (height, width, depth). If any atoms are found next to the same type of atom, then this crystal is unusable.
+
+**Input:** Crystal cube as a list of lists of lists of strings.
+
+**Output:** The crystal quality as a boolean.
+
+**Example:**
+````
+golf([[["X", "Z"],
+     ["Z", "X"]],
+    [["Z", "X"],
+     ["X", "Z"]]]) == True
+golf([[
+     ["X", "Z"],
+     ["Z", "X"]],
+    [["X", "Z"],
+     ["Z", "X"]]]) == False
+````
+**Precondition:**
+````
+1 < |cube| ≤ 5
+````
+All slices are rectangular and have the same size.
+
+cube can contain only "X" or "Z".
+
+**Scoring:**
+
+In this mission the main goal is to make your code as short as possible. The shorter your code, the more points you earn. Your score for this mission is dynamic and directly related to the length of your code.
+
+Scoring in this mission is based on the number of characters used in your code (comment lines are not counted).
+
+**Rank1:**
+
+Any code length.
+
+**Rank2:**
+
+Your code should be shorter than 300 characters.
+
+**Rank3:**
+
+Your code should be shorter than 200 characters.
+
+**How it is used:**
+
+This mission can show you work with more deep structures, which can not be easily drawn in notebook.
