@@ -1532,3 +1532,62 @@ Your code should be shorter than 200 characters.
 **How it is used:**
 
 This mission can show you work with more deep structures, which can not be easily drawn in notebook.
+
+---------------------
+### Pattern Recognition
+
+In our computer, a slice image and pattern can be represented as a binary matrix, where the main atoms (X and Z) are represented with 1 and 0. You should write a program to search a binary matrix (pattern) within another binary matrix (image). The recognition process consists of scanning the image matrix row by row (horizontal scanning) and marking patterns when one is located in the image. To mark a located pattern, the program must change 1 to 3 and 0 to 2. The result will be the image matrix with the located patterns marked.
+
+The patterns in the image matrix will never cross because the value of each number in the pattern is immediately changed when marked.
+````
+Pattern     Image
+
+  1 0       0 1 0 1 0
+  1 1       0 1 1 0 0
+            1 0 1 1 0
+            1 1 0 1 1
+            0 1 1 0 0
+
+   1st         2nd         3rd
+0 3 2 1 0   0 3 2 1 0   0 3 2 1 0
+0 3 3 0 0   0 3 3 0 0   0 3 3 0 0
+1 0 1 1 0   3 2 1 1 0   3 2 1 3 2
+1 1 0 1 1   3 3 0 1 1   3 3 0 3 3
+0 1 1 0 0   0 1 1 0 0   0 1 1 0 0
+````
+
+**Input:** Two arguments. A pattern as a list of lists and an image as a list of lists.
+
+**Output:** The marked image as a matrix as a list of lists.
+
+**Example:**
+````
+mark_patterns([[1, 0], [1, 1]],
+              [[0, 1, 0, 1, 0],
+               [0, 1, 1, 0, 0],
+               [1, 0, 1, 1, 0],
+               [1, 1, 0, 1, 1],
+               [0, 1, 1, 0, 0]]) == [[0, 3, 2, 1, 0],
+                                     [0, 3, 3, 0, 0],
+                                     [3, 2, 1, 3, 2],
+                                     [3, 3, 0, 3, 3],
+                                     [0, 1, 1, 0, 0]]
+mark_patterns([[1, 1], [1, 1]],
+              [[1, 1, 1],
+               [1, 1, 1],
+               [1, 1, 1]]) == [[3, 3, 1],
+                               [3, 3, 1],
+                               [1, 1, 1]]
+````
+**Precondition:**
+````
+0 < |image| ≤ 10
+
+0 < |pattern| < |image| ≤ 10
+````
+
+pattern and image are rectangular.
+
+**How it is used:**
+
+As we can see in the first paragraph, this task is simple monochromatic pattern recognition. You can take a monochrome image and find various sub-images inside, such as the alien spaceships in the Galaxy Game.
