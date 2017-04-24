@@ -1623,3 +1623,27 @@ morse_time("23:59:59") == "-. ..-- : -.- -..- : -.- -..-"
 **How it is used:**
 
 Did you play the binary clocks mission earlier? This can be the basis for a fun gift for any geek. Now we've remixed the binary clock idea with Morse Code. Now you can create an even more complex binary clock, one which doesn't just tell time -- but makes morse style bips and beeps. ;-)
+
+-----------
+### Pangram
+
+For this mission, we will use the latin alphabet (A-Z). You are given a text with latin letters and punctuation symbols. You need to check if the sentence is a pangram or not. Case does not matter.
+
+**Input:** A text as a string.
+
+**Output:** Whether the sentence is a pangram or not as a boolean.
+
+**Example:**
+````
+check_pangram("The quick brown fox jumps over the lazy dog.") == True
+check_pangram("ABCDEF.") == False
+````
+**Precondition:**
+
+Input text can contain only ASCII letters, whitespaces and punctuation symbols.
+````
+0 < |text|
+````
+**How it is used:**
+
+Pangrams have been used to display typefaces, test equipment, and develop skills in handwriting, calligraphy, and keyboarding for ages.
