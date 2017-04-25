@@ -1714,3 +1714,50 @@ OOO
 **How it is used:**
 
 The concepts in this task will help you when iterating data types. They can also be used in game algorithms, allowing you to know how to check results.
+
+------------
+### Spheroid Bullet
+
+We know the height and the width (in centimeters) for this spheroid. You should create a function to calculate the volume (cubic centimeters) and the surface area (square centimeters). **The results should be rounded to two decimals.**
+
+**Tips:** Be careful with sin-1x -- this is arcsin.
+
+**Input:** Two arguments. A height and a width as integers.
+
+**Output:** The volume and the surface area as a list/tuple of floats.
+
+**Example:**
+````
+golf(4, 2) == [8.38, 21.48] # or (8.38, 21.48)
+golf(2, 2) == [4.19, 12.57]
+golf(2, 4) == [16.76, 34.69]
+````
+**Precondition:**
+````
+0 < width < 100
+
+0 < height < 100
+````
+**Scoring:**
+
+Scoring in this mission is based on the number of characters used in your code (comment lines are not counted).
+
+**Rank1:**
+
+Any code length.
+
+**Rank2:**
+
+Your code should be shorter than 250 characters.
+
+**Rank3:**
+
+Your code should be shorter than 150 characters.
+
+**How it is used:**
+
+This is a simple math task, but we want to introduce you to the ubiquitous spheroid.
+
+For example, the prolate spheroid is the shape of the ball in several sports such as in rugby and Australian football. In American football, a more pointed prolate spheroid is used. Several moons of the Solar system approximate prolate spheroids in shape, though they are actually scalene. Examples of these are Mimas, Enceladus, and Tethys which orbit Saturn and Miranda which orbits Uranus.
+
+Even the true shape of the Earth is an Oblate Spheroid, though it is only very slightly oblate. The diameter from the North Pole to the South Pole (the shortest diameter) is approximately 12,714 km. The equatorial diameter (the longest diameter) is approximately 12,756 km. This is not a big difference, but it does mean the Earth is not quite a sphere.
