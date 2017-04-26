@@ -1761,3 +1761,63 @@ This is a simple math task, but we want to introduce you to the ubiquitous spher
 For example, the prolate spheroid is the shape of the ball in several sports such as in rugby and Australian football. In American football, a more pointed prolate spheroid is used. Several moons of the Solar system approximate prolate spheroids in shape, though they are actually scalene. Examples of these are Mimas, Enceladus, and Tethys which orbit Saturn and Miranda which orbits Uranus.
 
 Even the true shape of the Earth is an Oblate Spheroid, though it is only very slightly oblate. The diameter from the North Pole to the South Pole (the shortest diameter) is approximately 12,714 km. The equatorial diameter (the longest diameter) is approximately 12,756 km. This is not a big difference, but it does mean the Earth is not quite a sphere.
+
+------------
+### Transpose Matrix
+
+In linear algebra, the transpose of a matrix **A** is another matrix **A**<sup>T</sup> (also written **A**′, **A**<sup>tr</sup>,<sup>t</sup>**A** or **A**<sup>t</sup>) created by any one of the following equivalent actions:
+
+- reflect **A** over its main diagonal (which runs from top-left to bottom-right) to obtain **A**<sup>T</sup>
+- write the rows of **A** as the columns of **A**<sup>T</sup>
+- write the columns of **A** as the rows of **A**<sup>T</sup>
+
+Formally, the *i* row, *j* column element of **A**<sup>T</sup> is the *j* row, *i* column element of **A**:
+
+[**A**<sup>TL</sup>]<sub>i j</sub> = [**A**]<sub>j i</sub>
+
+If **A** is an `m × n` matrix then **A**<sup>T</sup> is an `n × m` matrix.
+
+You have been given a matrix as a 2D list with integers. Your task is to return a transposed matrix based on input.
+
+````
+|1 2 3|   |1 4 7|
+|4 5 6| T |2 5 8|
+|7 8 9|   |3 6 9|
+
+|1 4 3|
+|8 2 6|   |1 8 7 4 7|
+|7 8 3| T |4 2 8 9 8|
+|4 6 9|   |3 6 3 6 1|
+|7 8 1|
+````
+
+**Input:** A matrix as a list of lists with integers.
+
+**Output:** The transposed matrix as a list of lists with integers.
+
+**Example:**
+````
+transpose([[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]) == [[1, 4, 7],
+                     [2, 5, 8],
+                     [3, 6, 9]]
+transpose([[1, 4, 3],
+     [8, 2, 6],
+     [7, 8, 3],
+     [4, 9, 6],
+     [7, 8, 1]]) == [[1, 8, 7, 4, 7],
+                     [4, 2, 8, 9, 8],
+                     [3, 6, 3, 6, 1]]
+````
+
+**Precondition:**
+````
+0 < |matrix| < 10
+
+∀ row ∈ matrix: 0 < |row| < 10
+````
+
+**How it is used:**
+
+The most obvious use for this idea is in mathematical software, but the concept can be applied in the area of vector graphics. On a computer, one can often avoid explicitly transposing a matrix in memory by simply accessing the same data in a different order.
