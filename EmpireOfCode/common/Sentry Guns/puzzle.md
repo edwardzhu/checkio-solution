@@ -327,3 +327,39 @@ This is a simple math task, but we want to introduce you to the ubiquitous spher
 For example, the prolate spheroid is the shape of the ball in several sports such as in rugby and Australian football. In American football, a more pointed prolate spheroid is used. Several moons of the Solar system approximate prolate spheroids in shape, though they are actually scalene. Examples of these are Mimas, Enceladus, and Tethys which orbit Saturn and Miranda which orbits Uranus.
 
 Even the true shape of the Earth is an Oblate Spheroid, though it is only very slightly oblate. The diameter from the North Pole to the South Pole (the shortest diameter) is approximately 12,714 km. The equatorial diameter (the longest diameter) is approximately 12,756 km. This is not a big difference, but it does mean the Earth is not quite a sphere.
+
+-------------
+### Skew Symmetry
+
+In mathematics, particularly in linear algebra, a skew-symmetric matrix(also known as an antisymmetric or antimetric) is a square matrix **A** whose transpose is also its negative. This means it satisfies the equation A=-A<sup>T</sup>. If the entry in the i-th row and j-th column is a<sub>ij</sub>, i.e. A=(a<sub>ij</sub>) then the symmetric condition becomes a<sub>ij</sub>=-a<sub>ji</sub>.
+
+You should determine whether the specified square matrix is skew-symmetric or not.
+
+You can find more details on Skew-symmetric matrices on its [Wikipedia page](https://en.wikipedia.org/wiki/Skew-symmetric_matrix)
+
+**Input:** A square matrix as a list of lists with integers.
+
+**Output:** If the matrix is skew-symmetric or not as a boolean.
+
+**Example:**
+````
+is_skew_symmetric([
+    [ 0,  1,  2],
+    [-1,  0,  1],
+    [-2, -1,  0]]) == True
+is_skew_symmetric([
+    [ 0,  1, 2],
+    [-1,  1, 1],
+    [-2, -1, 0]]) == False
+is_skew_symmetric([
+    [ 0,  1, 2],
+    [-1,  0, 1],
+    [-3, -1, 0]]) == False
+````
+**Precondition:**
+
+A `matrix` is square and non-empty.
+
+**How it is used:**
+
+Skew-symmetric matrices can be useful for the cross product, an operation in mathematics used in the calculation of movement of forces. Matrixes are basis for the linear algebra and vector graphics.
