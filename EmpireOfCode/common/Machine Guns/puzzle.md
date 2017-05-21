@@ -220,3 +220,46 @@ first ≠ second
 **How it is used:**
 
 Sometimes we don't need a full pathfinding algorithm implementation and can use simplified realization of these algorithms.
+
+----------
+### Space Gulf
+
+There are 5 (five) holes on the square field with size 10x10 units. You are given coordinates of the holes. For the winning you should find the shortest way through all holes and your function must return the length of this way. You are start in the point (0, 0) and can finish in any hole. The result will be checked with ±0.01 precision.
+
+**Input:** A set of hole coordinates. Each hole coordinates are represented as a tuple of integers.
+
+**Output:** The length of the shortest path as a float.
+
+**Example:**
+````
+golf({(2, 2), (2, 8), (8, 8), (8, 2), (5, 5)}) == 23.31
+golf({(2, 2), (4, 4), (6, 6), (8, 8), (9, 9)}) == 12.73
+````
+**Precondition:**
+````
+|holes| = 5
+
+∀ x, y ∈ array: 0 < x < 10 AND 0 < y < 10
+````
+
+**Scoring:**
+
+In this mission the main goal to make your code as short as possible. The shorter your code, the more points you earn. Your score for this mission is dynamic and directly related to the length of your code.
+
+Scoring in this mission is based on the number of characters used in your code (comment lines are not counted).
+
+**Rank1:**
+
+Any code length.
+
+**Rank2:**
+
+Your code should be shorter than 250 characters.
+
+**Rank3:**
+
+Your code should be shorter than 150 characters.
+
+**How it is used:**
+
+This task is not about elegant or performance code. This is about hacks and tricks in python which help you to shorten your code. You don't need to use this in production, but it can help for deep comprehension of python.
