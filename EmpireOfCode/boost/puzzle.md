@@ -237,3 +237,32 @@ A phrase always has the translation.
 **How it is used:**
 
 This a similar cipher to those used by children when they invent their own "bird" language. Now you will be ready to crack the code.
+
+---------------
+### Common Words
+
+You are given two string with words separated by commas. Try to find what is common between these strings. The words are not repeated in the same string.
+
+Your function should find all of the words that appear in both strings. The result must be represented as a string of words separated by commas in **alphabetical order**.
+
+**Input:** Two arguments as strings.
+
+**Output:** The common words as a string.
+
+**Example:**
+````
+common_words("hello,world", "hello,earth") == "hello"
+common_words("one,two,three", "four,five,six") == ""
+common_words("one,two,three", "four,five,one,two,six,three") == "one,three,two"
+````
+**Precondition:**
+
+Each string contains no more than 10 words.
+
+All words separated by commas.
+
+All words consist of lowercase latin letters.
+
+**How it is used:**
+
+This mission simply teaches you how to work with strings and sets, knowledge which can be useful in linguistic analysis.
